@@ -5,7 +5,8 @@ import InputForm from './components/InputForm';
 import './App.css';
 function App() {
     return (
-        <div>
+        <div className="login-container">
+
         <ListGroup></ListGroup>
          <Message></Message>
         <InputForm></InputForm>

@@ -52,3 +52,14 @@
         color: #76A8D6;
         text-decoration: underline;
     }
+
+/* Apply this style to the root div in your App component */
+.app-container {
+    display: flex;
+    flex-direction: column; /* Aligns children vertically */
+    justify-content: center; /* Centers children vertically in the container */
+    align-items: center; /* Centers children horizontally in the container */
+    height: 100vh; /* Uses the full height of the viewport */
+    width: 100vw; /* Uses the full width of the viewport */
+    margin: 0; /* Removes default margin */
+}
