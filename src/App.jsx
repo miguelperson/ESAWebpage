@@ -2,15 +2,14 @@
 import Message from './Message';
 import ListGroup from './components/ListGroup';
 import InputForm from './components/InputForm';
+
 import './App.css';
 function App() {
     return (
         <div className="app-container">
             <div className="component-style">
-                <ListGroup></ListGroup>
-            </div>
-            <div className="component-style">
                 <InputForm></InputForm>
+                
             </div>
         </div>
     );

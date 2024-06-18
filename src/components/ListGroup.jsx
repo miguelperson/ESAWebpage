@@ -5,7 +5,7 @@ import { useState } from "react";
 
 function ListGroup(props) {// wrapped two different elements in div to allow passing of weo elements in it, Fragment was also used to replace div, can also use empty angle brackets <> and react will know its fragment
     let items = ['new york', 'san fransicso', 'Shanghai'];
-
+    // items = [];
     // items.map() function call changes items in list to <li> type so we can print it to the front end
     // key can just use the items although sometimes it would be like item.id if theres more info in the components of the list
     // items.length === 0 ? <p>No item foudn</p> : null is like a built in if-else statement
@@ -33,11 +33,12 @@ function ListGroup(props) {// wrapped two different elements in div to allow pas
     return (
         <Fragment>
             <h1>ESA Parcel Search Login</h1>
-            {items.length === 0 ? <p>No item foudn</p> : null}
+            {items.length === 0 ? <p>oawifjoweaijfoeiw</p> : null}
             {items.length === 0 && <p>No Item found</p> // allows us to post the content without a null operator and stuff
             }
         <ul className="list-group">
-                {items.map((item, index) => <li
+                {items.map((item, index) =>
+                    <li
                     className={selectedIndex === index ? 'list-group-item active' : 'list-group-item'}
                     key={item}
                     onClick={() => {

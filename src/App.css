@@ -54,3 +54,12 @@
         color: #76A8D6;
         text-decoration: underline;
     }
+
+.page-break{
+    break-after: page;
+}
+
+.log-in-text {
+    color: #415972;
+    font-weight: bold;
+}

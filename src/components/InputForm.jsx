@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 function InputForm() {
     const [input1, setInput1] = useState('');
     const [input2, setInput2] = useState('');
@@ -10,19 +11,34 @@ function InputForm() {
 
     return (
         <div>
-            <input
+            <h1>ESA Parcel Search Log in</h1>
+            <center>
+                { // <label className="log-in-text">Username</label>
+                }
+                <input
+                className="component-input"
                 type="text"
-                placeholder="Enter first value"
+                placeholder="Enter Username"
                 value={input1}
                 onChange={handleInputChange(setInput1)}
             />
-            <input
+                <br></br>
+
+                {//<label className="log-in-text">Password</label>
+                }
+                <input
+                className="component-input"
                 type="text"
-                placeholder="Enter second value"
+                placeholder="Enter Password"
                 value={input2}
                 onChange={handleInputChange(setInput2)}
-            />
+                />
+                <br></br>
+                <br></br>
+            <input type="submit" value="Login" className="component-button"></input>
+            </center>
         </div>
+
     );
 }
 
