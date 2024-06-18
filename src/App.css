@@ -4,7 +4,9 @@
     justify-content: center; /* Centers children vertically in the container */
     align-items: center; /* Centers children horizontally in the container */
     height: 100vh; /* Uses the full height of the viewport */
-    background-color: #415972; /* Sets a background color */
+    background: url('assets/floating-solar-esa-solar.jpg'); /* Sets a background color */
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 
 .component-style {
