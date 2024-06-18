@@ -32,7 +32,7 @@ function ListGroup(props) {// wrapped two different elements in div to allow pas
 
     return (
         <Fragment>
-            <h1>List thing</h1>
+            <h1>ESA Parcel Search Login</h1>
             {items.length === 0 ? <p>No item foudn</p> : null}
             {items.length === 0 && <p>No Item found</p> // allows us to post the content without a null operator and stuff
             }
