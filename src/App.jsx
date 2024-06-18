@@ -1,9 +1,10 @@
 // import Message from './Message';
-import Message from './Message';
+import RegisterPage from './components/RegisterPage';
 import ListGroup from './components/ListGroup';
 import InputForm from './components/InputForm';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
 function App() {
     return (
@@ -12,7 +13,7 @@ function App() {
                 <div className="background">
                     <Routes>
                         <Route path="/" element={<div className="component-style"><InputForm></InputForm></div>} />
-                        <Route path="/message" element={<div className="component-style"><Message></Message></div>} />
+                        <Route path="/RegisterPage" element={<div className="component-style"><RegisterPage></RegisterPage></div>} />
                         <Route path="/list" element={<div className="component-style"><ListGroup></ListGroup></div>} />
                     </Routes>
                 </div>
