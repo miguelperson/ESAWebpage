@@ -5,13 +5,14 @@ import InputForm from './components/InputForm';
 import './App.css';
 function App() {
     return (
-        <div className="login-container">
-
-        <ListGroup></ListGroup>
-         <Message></Message>
-        <InputForm></InputForm>
-
-    </div>
+        <div className="app-container">
+            <div className="component-style">
+                <ListGroup></ListGroup>
+            </div>
+            <div className="component-style">
+                <InputForm></InputForm>
+            </div>
+        </div>
     );
 }
 
