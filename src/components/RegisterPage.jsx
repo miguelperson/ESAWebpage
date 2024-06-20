@@ -1,9 +1,13 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 function registerPage() {
-    let name = "miguel";
+    // let name = "miguel";
+    const [input1, setInput1] = useState('');
+
     return (
         <div>
             <h1>Registration Page</h1>
-            <p>this is a test... the name is {name}</p>
+            <p>this is a test... the bird is the word</p>
             <input
                 className="component-input"
                 type="text"
