@@ -6,60 +6,65 @@ function RegisterPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [nameError, setNameError] = useState('');
+    const [emailError, setEmailError] = useState('');
 
     const registerButton = () => {
-        let tempEmail = email.split("@");
-        // Check if tempEmail has two parts and the domain matches exactly "esa-solar.com"
-        if (tempEmail.length === 2 && tempEmail[1].localeCompare("esa-solar.com") === 0) {
-            alert("Emails match, congratulations!"); // would use this block to push information to the back end
+        let isValid = true;
+        if (!input1) {
+            setNameError("Please enter your full name");
+            isValid = false;
         } else {
-            alert("Invalid email address.");
+            setNameError('');
         }
-    };
 
-    const enterName = event => {
-        setInput1(event.target.value);
-    };
+        let tempEmail = email.split("@");
+        if (tempEmail.length === 2 && tempEmail[1].localeCompare("esa-solar.com") === 0) {
+            setEmailError('');
+        } else {
+            setEmailError("Invalid email address. Must be a 'esa-solar.com' email.");
+            isValid = false;
+        }
 
-    const enterEmail = event => {
-        setEmail(event.target.value);
-    };
-
-    const enterPassword = event => {
-        setPassword(event.target.value);
-    };
-
-    const enterConfirmPassword = event => {
-        setConfirmPassword(event.target.value);
+        if (isValid) {
+            // Proceed with backend submission
+            alert("Form is valid, proceed with backend submission");
+        }
     };
 
     return (
         <div>
             <h1>Registration Page</h1>
             <p>this is a test... the bird is the word</p>
+            <div>
+                <input
+                    onChange={e => setInput1(e.target.value)}
+                    className="component-input"
+                    type="text"
+                    placeholder="Full Name"
+                    value={input1}
+                />
+                {nameError && <div style={{ color: 'red' }}>{nameError}</div>}
+            </div>
+            <div>
+                <input
+                    onChange={e => setEmail(e.target.value)}
+                    className="component-input"
+                    type="email"
+                    placeholder="Company Email Address"
+                    value={email}
+                />
+                {emailError && <div style={{ color: 'red' }}>{emailError}</div>}
+            </div>
             <input
-                onChange={enterName}
-                className="component-input"
-                type="text"
-                placeholder="Full Name"
-                value={input1}
-            />
-            <input
-                onChange={enterEmail}
-                className="component-input"
-                type="email"
-                placeholder="Company Email Address"
-                value={email}
-            />
-            <input
-                onChange={enterPassword}
+                onChange={e => setPassword(e.target.value)}
                 className="component-input"
                 type="password"
                 placeholder="Password"
                 value={password}
             />
             <input
-                onChange={enterConfirmPassword}
+                onChange={e => setConfirmPassword(e.target.value)}
                 className="component-input"
                 type="password"
                 placeholder="Re-Enter Password"
