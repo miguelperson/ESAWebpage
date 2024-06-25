@@ -28,15 +28,19 @@ function RegisterPage() {
 
         if (isValid) {
             // Proceed with backend submission
-            alert("Form is valid, proceed with backend submission");
+            alert("Form is valid, proceed with backend submission"); // this is where the back end handling will be done
         }
+    };
+
+        const handleSubmit = (event) => {
+        event.preventDefault(); // Prevent the default form submit action
+        registerButton();
     };
 
     return (
         <div>
             <h1>Registration Page</h1>
-            <p>this is a test... the bird is the word</p>
-            <div>
+            <form onSubmit={handleSubmit}>
                 <input
                     onChange={e => setInput1(e.target.value)}
                     className="component-input"
@@ -45,8 +49,7 @@ function RegisterPage() {
                     value={input1}
                 />
                 {nameError && <div style={{ color: 'red' }}>{nameError}</div>}
-            </div>
-            <div>
+
                 <input
                     onChange={e => setEmail(e.target.value)}
                     className="component-input"
@@ -55,22 +58,25 @@ function RegisterPage() {
                     value={email}
                 />
                 {emailError && <div style={{ color: 'red' }}>{emailError}</div>}
-            </div>
-            <input
-                onChange={e => setPassword(e.target.value)}
-                className="component-input"
-                type="password"
-                placeholder="Password"
-                value={password}
-            />
-            <input
-                onChange={e => setConfirmPassword(e.target.value)}
-                className="component-input"
-                type="password"
-                placeholder="Re-Enter Password"
-                value={confirmPassword}
-            />
-            <button className="component-button" onClick={registerButton}>Create Account</button>
+
+                <input
+                    onChange={e => setPassword(e.target.value)}
+                    className="component-input"
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                />
+
+                <input
+                    onChange={e => setConfirmPassword(e.target.value)}
+                    className="component-input"
+                    type="password"
+                    placeholder="Re-Enter Password"
+                    value={confirmPassword}
+                />
+
+                <button type="submit" className="component-button">Create Account</button>
+            </form>
         </div>
     );
 }
