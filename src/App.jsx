@@ -14,9 +14,10 @@ function App() {
                 <div className="background">
                     <Routes>
                         <Route path="/" element={<div className="component-style"><InputForm></InputForm></div>} />
+                        <Route path="/emailVerification" element={<div className="component-style"><emailVerification></emailVerification></div>} />
                         <Route path="/RegisterPage" element={<div className="component-style"><RegisterPage></RegisterPage></div>} />
                         <Route path="/list" element={<div className="component-style"><ListGroup></ListGroup></div>} />
-                        <Route path="/emailVerification" element={<div className="component-style"><emailVerification></emailVerification></div>} />
+
                     </Routes>
                 </div>
             </div>
