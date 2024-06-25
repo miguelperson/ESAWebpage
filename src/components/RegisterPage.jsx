@@ -8,6 +8,7 @@ function RegisterPage() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [nameError, setNameError] = useState('');
     const [emailError, setEmailError] = useState('');
+    const navigate = useNavigate();
 
     const registerButton = () => {
         let isValid = true;
@@ -28,7 +29,8 @@ function RegisterPage() {
 
         if (isValid) {
             // Proceed with backend submission
-            alert("Form is valid, proceed with backend submission"); // this is where the back end handling will be done
+            // alert("Form is valid, proceed with backend submission"); // this is where the back end handling will be done
+            navigate('/emailVerification');
         }
     };
 
