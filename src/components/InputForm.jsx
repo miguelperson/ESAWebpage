@@ -41,7 +41,7 @@ function InputForm() {
                 <br></br>
                 <br></br>
                 <input type="submit" value="Login" className="component-button"></input>
-                <input type="submit" value="Register" className="component-button" onClick={handleRegister }></input>
+                <input type="submit" value="Register" className="component-button" onClick={handleRegister}></input>
             </center>
         </div>
 

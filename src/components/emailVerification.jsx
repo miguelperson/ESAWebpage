@@ -6,9 +6,9 @@ function emailVerification() {
 
     return (
         <div>
-            <h1>Registration Page</h1>
-            <p>this is a test paragraph</p>
+            <h1>ESA Parcel Search</h1>
         </div>
+
     );
 }
 

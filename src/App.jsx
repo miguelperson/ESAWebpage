@@ -2,7 +2,7 @@
 import RegisterPage from './components/RegisterPage';
 import ListGroup from './components/ListGroup';
 import InputForm from './components/InputForm';
-import emailVerification from './components/emailVerification';
+import emailVerification from './components/emailVerification'
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom'
@@ -13,11 +13,10 @@ function App() {
             <div className="app-container">
                 <div className="background">
                     <Routes>
-                        <Route path="/" element={<div className="component-style"><InputForm></InputForm></div>} />
-                        <Route path="/emailVerification" element={<div className="component-style"><emailVerification></emailVerification></div>} />
-                        <Route path="/RegisterPage" element={<div className="component-style"><RegisterPage></RegisterPage></div>} />
-                        <Route path="/list" element={<div className="component-style"><ListGroup></ListGroup></div>} />
-
+                        <Route path="/" element={<div className="component-style"><InputForm /></div>} />
+                        <Route path="/RegisterPage" element={<div className="component-style"><RegisterPage /></div>} />
+                        <Route path="/list" element={<div className="component-style"><ListGroup /></div>} />
+                        <Route path="/emailVerification" element={<div className="component-style"><emailVerification /></div>} />
                     </Routes>
                 </div>
             </div>
