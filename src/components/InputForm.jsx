@@ -11,7 +11,7 @@ function InputForm() {
         setter(event.target.value);
     };
     const handleRegister = () => {
-        navigate('/RegisterPage')
+        navigate('/RegisterPage') // test comment
     }
 
     return (
