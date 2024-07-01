@@ -29,7 +29,7 @@ function RegisterPage() {
 
         if (isValid) {
             // Proceed with backend submission
-            // alert("Form is valid, proceed with backend submission"); // this is where the back end handling will be done
+            alert("Form is valid, proceed with backend submission"); // this is where the back end handling will be done
             navigate('/emailVerification');
         }
     };
