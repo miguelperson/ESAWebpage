@@ -3,6 +3,7 @@ import RegisterPage from './components/RegisterPage';
 import ListGroup from './components/ListGroup';
 import InputForm from './components/InputForm';
 import EmailVerification from './components/EmailVerification'
+import DashBoard from './components/DashBoard'
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom'
@@ -17,6 +18,8 @@ function App() {
                         <Route path="/RegisterPage" element={<div className="component-style"><RegisterPage /></div>} />
                         <Route path="/list" element={<div className="component-style"><ListGroup /></div>} />
                         <Route path="/EmailVerification" element={<div className="component-style"><EmailVerification /></div>} />
+                        <Route path="/DashBoard" element={<div className="component-style"><DashBoard /></div>} />
+
                     </Routes>
                 </div>
             </div>

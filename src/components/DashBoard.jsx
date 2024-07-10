@@ -6,7 +6,7 @@ function DashBoard() {
 
     return (
         <div>
-            <h1>ESA Parcel Search</h1>
+            <h1>Pinche Cabron</h1>
             <input
                 onChange={e => setCode(e.target.value)}
                 className="component-input"

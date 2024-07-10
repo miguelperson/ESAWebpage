@@ -14,6 +14,10 @@ function InputForm() {
         navigate('/RegisterPage') // test comment
     }
 
+    const handleLogin = () => {
+        navigate('/DashBoard')
+    }
+
     return (
         <div>
             <h1>ESA Parcel Search</h1>
@@ -40,7 +44,7 @@ function InputForm() {
                 />
                 <br></br>
                 <br></br>
-                <input type="submit" value="Login" className="component-button"></input>
+                <input type="submit" value="Login" className="component-button" onClick={handleLogin}></input>
                 <input type="submit" value="Register" className="component-button" onClick={handleRegister}></input>
             </center>
         </div>
