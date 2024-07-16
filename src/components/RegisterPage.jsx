@@ -10,7 +10,7 @@ function RegisterPage() {
     const [emailError, setEmailError] = useState('');
     const navigate = useNavigate();
 
-    const registerButton = () => {
+    const registerButton = async () => {
         let isValid = true;
         if (!input1) {
             setNameError("Please enter your full name");
