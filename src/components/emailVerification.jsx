@@ -13,7 +13,7 @@ function EmailVerification() {
                 onChange={e => setCode(e.target.value)}
                 className="component-input"
                 type="email"
-                placeholder="Confirmation Code"
+                placeholder="Email Confirmation Code"
                 value={verificationCode}
             />
         </div>
