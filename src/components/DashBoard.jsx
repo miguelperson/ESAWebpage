@@ -14,6 +14,7 @@ function DashBoard() {
                 placeholder="Confirmation Code"
                 value={verificationCode}
             />
+            <p1>you're in the dashboard bitch</p1>
         </div>
 
     );
